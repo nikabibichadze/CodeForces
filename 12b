@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+string k,j;
+int main (){
+	string s,t;
+	cin>>s>>t;
+	int d=s.size();
+	for (int i=0; i<s.size(); i++){
+		if (s[i]!='0')
+		k+=s[i];
+	}
+	sort (k.begin(), k.end()); 
+	int r= s.size()-k.size();
+	if (k.size()>0)
+	j+=k[0];
+	for (int i=0; i<r; i++)
+	j+='0';
+	for (int i=1; i<k.size(); i++)
+	j+=k[i];
+	if (j==t)
+	cout<<"OK";
+	else
+	cout<<"WRONG_ANSWER";
+	return 0;
+}
